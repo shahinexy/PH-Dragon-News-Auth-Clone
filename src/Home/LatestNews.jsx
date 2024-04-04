@@ -6,8 +6,8 @@ const LatestNews = () => {
         <div>
             
       {/* latest news  */}
-      <div className="flex">
-        <button className="btn bg-purple-500 rounded-none">Latest</button>
+      <div className="flex p-2 bg-gray-300">
+        <button className="btn bg-purple-500 rounded-none text-white">Latest</button>
         <Marquee pauseOnHover={true} speed={100}>
           <Link className="mr-5" to={'/'}>I can be a React component, multiple React components, or just some
           text.</Link>
