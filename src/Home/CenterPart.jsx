@@ -23,7 +23,7 @@ const CenterPart = ({news}) => {
             <h2 className="text-xl font-semibold">{title}</h2>
             <img src={image_url} alt="" />
             {
-              details.length > 200 ? <p>{details.slice(0,200)} <Link to={'/singleNews'} className="font-bold text-purple-500">Read more...</Link></p>
+              details.length > 200 ? <p>{details.slice(0,200)} <Link to={`/singleNews/${_id}`} className="font-bold text-purple-500">Read more...</Link></p>
               : <p>{details}</p> 
             }
             <button>Read More</button>

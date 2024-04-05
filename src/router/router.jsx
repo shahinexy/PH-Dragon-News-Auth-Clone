@@ -15,7 +15,7 @@ import SingleNews from "../Home/SingleNews";
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('news.json')
+            loader: ()=> fetch('/news.json')
         },
         {
           path: '/login',
@@ -26,8 +26,8 @@ import SingleNews from "../Home/SingleNews";
           element: <Register></Register>
         },
         {
-          path: '/singleNews',
-          element: <SingleNews></SingleNews>
+          path: '/singleNews/:id',
+          element: <SingleNews></SingleNews>,
         }
       ]
     },
