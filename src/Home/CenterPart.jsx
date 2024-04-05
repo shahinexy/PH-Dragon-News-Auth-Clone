@@ -2,7 +2,7 @@ import { FaBookmark, FaEye, FaShare } from "react-icons/fa";
 
 const CenterPart = () => {
   return (
-    <div>
+    <div className="my-3">
       <div className="border">
         <div className="flex justify-between items-center p-3 bg-gray-200">
           <div className="flex gap-3">

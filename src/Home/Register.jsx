@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "../Shared/NavBar";
 
-const Login = () => {
+const Register = () => {
   return (
     <div>
       <NavBar></NavBar>
@@ -9,11 +9,33 @@ const Login = () => {
         <form className="card-body md:w-1/2 mx-auto">
           <div className="form-control">
             <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Name"
+              className="input input-bordered"
+              
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Photo url"
+              className="input input-bordered"
+              
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input
               type="email"
-              placeholder="email"
+              placeholder="Email"
               className="input input-bordered"
               required
             />
@@ -24,26 +46,21 @@ const Login = () => {
             </label>
             <input
               type="password"
-              placeholder="password"
+              placeholder="Password"
               className="input input-bordered"
               required
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary bg-purple-500 text-white">Login</button>
+            <button className="btn btn-primary text-white">Register</button>
           </div>
           <p className="my-3">
-            do not have an account?{" "}
+            Already have an account?{" "}
             <Link
-              to={"/register"}
+              to={"/login"}
               className="text-purple-500 font-bold underline"
             >
-              Register
+              Login
             </Link>
           </p>
         </form>
@@ -52,4 +69,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
