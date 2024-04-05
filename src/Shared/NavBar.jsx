@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import defaultUser from '../assets/user.png'
 const NavBar = () => {
   const navLink = (
@@ -64,7 +64,7 @@ const NavBar = () => {
                 />
               </div>
             </div>
-            <a className="btn bg-purple-500 text-white ml-3">Login</a>
+            <Link to={'/login'} className="btn bg-purple-500 text-white ml-3">Login</Link>
           </div>
         </div>
       </nav>
