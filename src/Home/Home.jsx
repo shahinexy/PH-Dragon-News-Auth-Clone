@@ -8,7 +8,6 @@ import LatestNews from "./LatestNews";
 
 const Home = () => {
   const news = useLoaderData()
-  console.log(news);
   return (
     <div>
       <Header></Header>
@@ -21,7 +20,7 @@ const Home = () => {
         </div>
         <div className="md:col-span-2 ">
           {
-            news.map(anews => <CenterPart key={news._id}>{anews}</CenterPart>)
+            news.map(anews => <CenterPart key={anews._id} news={anews}></CenterPart>)
           }
         </div>
         <div>
