@@ -1,13 +1,22 @@
+import { useContext } from "react";
 import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter } from "react-icons/fa";
+import { authContext } from "../Root/AuthProvider";
 
 const RigthSideNav = () => {
+  const {popupLogin} = useContext(authContext)
+
+  const handleGoogleSignin = () =>{
+    popupLogin()
+    .then()
+    .catch()
+  }
   return (
     <div>
       <div className=" p-3 ">
         <h3 className="font-bold">Login With</h3>
       </div>
       <div>
-        <button className="btn w-full border-2 border-sky-700 rounded-none text-sky-700 mb-3"><FaGoogle></FaGoogle> Login with google</button>
+        <button onClick={handleGoogleSignin} className="btn w-full border-2 border-sky-700 rounded-none text-sky-700 mb-3"><FaGoogle></FaGoogle> Login with google</button>
         <button className="btn w-full border-2 border-gray-700 rounded-none text-gray-700 mb-3"><FaGithub></FaGithub> Login with github</button>
       </div>
 
