@@ -5,11 +5,13 @@ import Login from "../Home/Login";
 import Register from "../Home/Register";
 import SingleNews from "../Home/SingleNews";
 import PrivetRout from "./PrivetRout";
+import ErrorePage from "../Home/ErrorePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorePage></ErrorePage>,
     children: [
       {
         path: "/",
