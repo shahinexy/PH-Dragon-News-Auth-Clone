@@ -3,10 +3,15 @@ import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter } from "react-ic
 import { authContext } from "../Root/AuthProvider";
 
 const RigthSideNav = () => {
-  const {popupLogin} = useContext(authContext)
+  const {popupLogin, githubLogin} = useContext(authContext)
 
   const handleGoogleSignin = () =>{
     popupLogin()
+    .then()
+    .catch()
+  }
+  const handleGithubLogin = () =>{
+    githubLogin()
     .then()
     .catch()
   }
@@ -17,7 +22,7 @@ const RigthSideNav = () => {
       </div>
       <div>
         <button onClick={handleGoogleSignin} className="btn w-full border-2 border-sky-700 rounded-none text-sky-700 mb-3"><FaGoogle></FaGoogle> Login with google</button>
-        <button className="btn w-full border-2 border-gray-700 rounded-none text-gray-700 mb-3"><FaGithub></FaGithub> Login with github</button>
+        <button onClick={handleGithubLogin} className="btn w-full border-2 border-gray-700 rounded-none text-gray-700 mb-3"><FaGithub></FaGithub> Login with github</button>
       </div>
 
       <div className=" p-3  mt-5">
