@@ -36,7 +36,6 @@ const CenterPart = ({ news }) => {
           ) : (
             <p>{details}</p>
           )}
-          <button>Read More</button>
           <hr />
           <div className="flex justify-between">
             <p>Rating {rating.number}</p>
