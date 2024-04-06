@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import NavBar from "../Shared/NavBar";
 import { useContext } from "react";
 import { authContext } from "../Root/AuthProvider";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const {userSignIN} = useContext(authContext)
+  const {userSignIN} = useContext(authContext)  
+  const location = useLocation()
+  const naviget = useNavigate()
 
   const handleLogin = e => {
     e.preventDefault();
@@ -13,7 +16,11 @@ const Login = () => {
     const email = form.get('email')
     const pass = form.get('pass')
     userSignIN(email, pass)
-    .then(res => console.log(res))
+    .then(res => {
+      console.log(res)
+      
+      naviget(location?.state ? location.state : '/')
+    })
     .catch(error =>console.log(error))
 
   };
